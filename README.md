@@ -1,25 +1,15 @@
-# roscpp_tutorials
-A repository with all the package descriptions and packages and source code to learn roscpp
+# trajectory_evaluation
+A package to be used with rpg_trajectory_evaluation
+- https://github.com/uzh-rpg/rpg_trajectory_evaluation#evaluation-parameters
 
-Initialize a workspace:
+#### Usage
+- A node that subscribes to the  ```grountruth_topic``` and ```trajectory_estimation``` topic and writes them to a file in the prescribed format
+
+#### Poses
+The groundtruth (`stamped_groundtruth.txt`) and estimated poses (`stamped_traj_estimate.txt`) are specified in the following format
 
 ```
-mkdir -p catkin_ws/src
-cd catkin_ws/src
-catkin_create_pkg intro_nodes std_msgs roscpp 
-```
-
-Now we write the source code in the /src directory of intro_nodes
-Add the following lines to the CMakeLists.txt file
-```
-add_executable(publisher src/publisher.cpp)
-add_executable(subscriber src/subscriber.cpp)
-target_link_libraries(publisher ${catkin_LIBRARIES})
-target_link_libraries(subscriber ${catkin_LIBRARIES})
-```
-To run the nodes go to the root of your workspace
-```
-roscore
-rosrun intro_nodes publisher
-rosrun intro_nodes subscriber
+# timestamp tx ty tz qx qy qz qw
+1.403636580013555527e+09 1.258278699999999979e-02 -1.561510199999999963e-03 -4.015300900000000339e-02 -5.131151899999999988e-02 -8.092916900000000080e-01 8.562779200000000248e-04 5.851609599999999523e-01
+......
 ```
