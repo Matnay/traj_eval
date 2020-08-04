@@ -4,6 +4,9 @@ A package to be used with rpg_trajectory_evaluation
 
 #### Usage
 - A node that subscribes to the  ```grountruth_topic``` and ```trajectory_estimation``` topic and writes them to a file in the prescribed format
+```
+rosrun traj_eval vm_eval
+```
 
 #### Poses
 The groundtruth (`stamped_groundtruth.txt`) and estimated poses (`stamped_traj_estimate.txt`) are specified in the following format
