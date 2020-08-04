@@ -32,7 +32,7 @@ void odom_callback(const nav_msgs::Odometry& msg)
 int main(int argc, char** argv) {
   ros::init(argc,argv,"relative_pose");
   ros::NodeHandle nh;
-      ros::Subscriber noisy_odom=nh.subscribe("/vicon/firefly_sbx/firefly_sbx",1,vicon_odom_callback);
+      ros::Subscriber noisy_odom=nh.subscribe("/groundtruth",1,vicon_odom_callback);
       ros::Subscriber odom=nh.subscribe("/vimo_estimator/odometry",1,odom_callback);
       //ros::Subscriber odom=nh.subscribe("/rovio/odometry",1,odom_callback);
       ros::spin();
