@@ -24,3 +24,22 @@ target_link_libraries(pose_eval
    ${catkin_LIBRARIES}
 )
 
+add_executable(loop_closed_eval src/loop_closure.cpp)
+target_link_libraries(loop_closed_eval
+   ${catkin_LIBRARIES}
+)
+
+add_executable(rovio_eval src/rovio_eval.cpp)
+target_link_libraries(rovio_eval
+   ${catkin_LIBRARIES}
+)
+
+add_executable(okvis_eval src/okvis_eval.cpp)
+target_link_libraries(okvis_eval
+   ${catkin_LIBRARIES}
+)
+
+add_executable(msckf_eval src/msckf_eval.cpp)
+target_link_libraries(msckf_eval
+   ${catkin_LIBRARIES}
+)
