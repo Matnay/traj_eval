@@ -48,3 +48,8 @@ add_executable(msckf_eval src/msckf_eval.cpp)
 target_link_libraries(msckf_eval
    ${catkin_LIBRARIES}
 )
+
+add_executable(svo_eval src/svo_eval.cpp)
+target_link_libraries(svo_eval
+   ${catkin_LIBRARIES}
+)
