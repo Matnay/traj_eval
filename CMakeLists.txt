@@ -39,7 +39,7 @@ target_link_libraries(okvis_eval
    ${catkin_LIBRARIES}
 )
 
-add_executable(kimera_eval src/okvis_eval.cpp)
+add_executable(kimera_eval src/kimera_eval.cpp)
 target_link_libraries(kimera_eval
    ${catkin_LIBRARIES}
 )
